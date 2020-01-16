@@ -2,15 +2,14 @@
 
 let input;
 let totalNum = 0;
-while( true ) {
-    input = prompt( "Введите число: " );
-    if( input === null ) break;
-    input = parseInt( input );
-    if( isNaN( input ) ) {
-        alert( "Было введено не число, попробуйте еще раз" );
-        console.log( "Задание №6\nБыло введено не число, попробуйте еще раз" )
-        continue;
-    }
-    totalNum += input;
+do {
+    input = prompt( "Введите число:" );
+    input = Number( input );
+    totalNum += Number( input );
+} while( input );
+if( input !== Number( input ) ) {
+    console.log( "Вы ввели не число" );
 }
-const message6 = alert( `Задание №6\nОбщая сумма чисел равна ${totalNum}` );
+else {
+    console.log( `Общая сумма чисел равна: ${totalNum}` );
+}
