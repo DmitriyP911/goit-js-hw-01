@@ -1,15 +1,13 @@
 `use strict`;
 
+let total = 0;
 let input;
-let totalNum = 0;
 do {
-    input = prompt( "Введите число:" );
-    input = Number( input );
-    totalNum += Number( input );
-} while( input );
-if( input !== Number( input ) ) {
-    console.log( "Вы ввели не число" );
-}
-else {
-    console.log( `Общая сумма чисел равна: ${totalNum}` );
-}
+    input = prompt( `Введите число` );
+    if( Number.isNaN( Number( input ) ) ) {
+        alert( `Вы ввели не число` );
+        continue;
+    }
+    total += +input;
+} while( input !== null );
+alert( `Общая сумма чисел равна ${total}` );
