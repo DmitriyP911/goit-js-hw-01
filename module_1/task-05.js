@@ -7,7 +7,6 @@ const australiaPrice = 170;
 const indiaPrice = 80;
 const jamaicaPrice = 120;
 if( deliveryCountry === null ) {
-    console.log( `В Вашей стране доставка недоступна` );
 }
 else {
     switch( deliveryCountry.toLowerCase() ) {
